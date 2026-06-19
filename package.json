@@ -1,0 +1,61 @@
+{
+  "name": "micress",
+  "displayName": "MICRESS",
+  "publisher": "micress",
+  "description": "Language support for MICRESS driving files in Visual Studio Code",
+  "version": "0.1.0",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukas-koschmieder/vscode-micress"
+  },
+  "icon": "images/micress-icon.png",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p ."
+  },
+  "contributes": {
+    "configuration": {
+      "title": "MICRESS",
+      "properties": {
+        "micress.decorations.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Draw horizontal separator lines between MICRESS Driving File sections."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "micress",
+        "aliases": [
+          "MICRESS",
+          "micress"
+        ],
+        "extensions": [
+          ".dri"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "micress",
+        "scopeName": "source.micress",
+        "path": "./syntaxes/micress.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "typescript": "^6.0.3"
+  }
+}

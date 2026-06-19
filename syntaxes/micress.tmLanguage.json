@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MICRESS",
+  "scopeName": "source.micress",
+  "patterns": [
+    { "include": "#userComments" },
+    { "include": "#micressComments" },
+    { "include": "#numbers" },
+    { "include": "#paths" }
+  ],
+  "repository": {
+    "userComments": {
+      "patterns": [
+        {
+          "name": "comment.line.documentation.micress",
+          "match": "^#!.*$"
+        }
+      ]
+    },
+
+    "micressComments": {
+      "patterns": [
+        {
+          "name": "comment.line.protocol.micress",
+          "match": "^#.*$"
+        }
+      ]
+    },
+
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.micress",
+          "match": "(?<![A-Za-z0-9_])[+-]?(?:(?:\\d+\\.\\d*)|(?:\\.\\d+)|(?:\\d+))(?:[eE][+-]?\\d+)?(?![A-Za-z0-9_])"
+        }
+      ]
+    },
+
+    "paths": {
+      "patterns": [
+        {
+          "name": "string.unquoted.path.micress",
+          "match": "(?:[A-Za-z]:)?(?:[A-Za-z0-9_.-]+/)+[A-Za-z0-9_.-]+"
+        }
+      ]
+    }
+  }
+}
