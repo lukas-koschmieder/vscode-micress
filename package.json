@@ -3,7 +3,7 @@
   "displayName": "MICRESS",
   "publisher": "micress",
   "description": "Language support for MICRESS driving files in Visual Studio Code",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^26.0.0",
     "@types/vscode": "^1.100.0",
     "typescript": "^6.0.3"
   }
